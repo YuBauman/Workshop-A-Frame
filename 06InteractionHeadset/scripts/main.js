@@ -46,6 +46,8 @@ function rotate() {
 	myBox.object3D.rotation.z += rotatingspeed;
 }
 
+setInterval(rotate, 10);
+
 myOtherBox.addEventListener('click', function(){ // uses a fuse
 	grow();
 	rotate();
