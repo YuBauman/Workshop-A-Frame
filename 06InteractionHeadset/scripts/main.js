@@ -1,6 +1,7 @@
 
 var rotationSpeed = 0.001;
 var myOtherBox = document.getElementById('myOtherBox');
+var myBox = document.getElementById('myBox');
 
 function spin(){
 	myOtherBox.object3D.rotation.x += rotationSpeed;
@@ -37,7 +38,19 @@ function grow(){
 	//console.log(myOtherBox.object3D.scale);
 }
 
+var rotatingspeed = 1.5
+
+function rotate() {
+	myBox.object3D.rotation.x *= rotatingspeed;
+	myBox.object3D.rotation.y *= rotatingspeed;
+	myBox.object3D.rotation.z *= rotatingspeed;
+}
+
 myOtherBox.addEventListener('click', function(){ // uses a fuse
 	grow();
+	rotate();
 	console.log('grew');
+	
 });
+
+
