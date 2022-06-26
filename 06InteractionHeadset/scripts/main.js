@@ -38,12 +38,12 @@ function grow(){
 	//console.log(myOtherBox.object3D.scale);
 }
 
-var rotatingspeed = 1.5
+var rotatingspeed = 0.01;
 
 function rotate() {
-	myBox.object3D.rotation.x *= rotatingspeed;
-	myBox.object3D.rotation.y *= rotatingspeed;
-	myBox.object3D.rotation.z *= rotatingspeed;
+	myBox.object3D.rotation.x += rotatingspeed;
+	myBox.object3D.rotation.y += rotatingspeed/2;
+	myBox.object3D.rotation.z += rotatingspeed;
 }
 
 myOtherBox.addEventListener('click', function(){ // uses a fuse
