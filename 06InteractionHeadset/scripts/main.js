@@ -24,7 +24,7 @@ setInterval(spin, 10);
 // 	console.log('left');
 // });
 
-var rotatingDegree = 1.5
+var rotatingDegree = 1.5;
 
 function rotate() {
 	myBox.object3D.rotation.x *= rotatingDegree;
@@ -48,7 +48,7 @@ function grow(){
 
 
 myOtherBox.addEventListener('click', function(){ // uses a fuse
-	rotationSpeed = rotationSpeed * 0.01;
+	rotationSpeed = 0.01;
 	rotate();
 	grow();
 	console.log('grew');
