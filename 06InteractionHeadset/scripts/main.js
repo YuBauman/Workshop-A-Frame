@@ -11,12 +11,8 @@ function spin(){
 }
 setInterval(spin, 10);
 
-function spinBox() {
-	myBox.object3D.rotation.x += rotationspeed;
-	myBox.object3D.rotation.y += rotationspeed/2;
-	myBox.object3D.rotation.z += rotationspeed;
-}
-setInterval(spinBox, 10);
+
+// setInterval(rotate, 10);
 
 // myOtherBox.addEventListener('mouseenter', function(){
 // 	rotationSpeed = 0.01;
@@ -28,14 +24,19 @@ setInterval(spinBox, 10);
 // 	console.log('left');
 // });
 
+var rotatingDegree = 1.5
 
-
+function rotate() {
+	myBox.object3D.rotation.x *= rotatingDegree;
+	myBox.object3D.rotation.y *= rotatingDegree/2;
+	myBox.object3D.rotation.z *= rotatingDegree;
+}
 
 /*
  * click-events can use a fuse (default on mobile). So the event only fires, if the cursor is on the object for a specified time. 
  */
 
-var growspeed = 1.2;
+var growspeed = 1.05;
 
 function grow(){
 	myOtherBox.object3D.scale.x *= growspeed;
@@ -48,6 +49,7 @@ function grow(){
 
 myOtherBox.addEventListener('click', function(){ // uses a fuse
 	rotationSpeed = 0.01;
+	rotate();
 	grow();
 	console.log('grew');
 	
