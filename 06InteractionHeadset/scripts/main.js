@@ -11,16 +11,22 @@ function spin(){
 }
 setInterval(spin, 10);
 
+function spinBox() {
+	myBox.object3D.rotation.x += rotationspeed;
+	myBox.object3D.rotation.y += rotationspeed/2;
+	myBox.object3D.rotation.z += rotationspeed;
+}
+setInterval(spinBox, 10);
 
-myOtherBox.addEventListener('mouseenter', function(){
-	rotationSpeed = 0.01;
-	console.log('entered');
-});
+// myOtherBox.addEventListener('mouseenter', function(){
+// 	rotationSpeed = 0.01;
+// 	console.log('entered');
+// });
 
-myOtherBox.addEventListener('mouseleave', function(){
-	rotationSpeed = 0.001;
-	console.log('left');
-});
+// myOtherBox.addEventListener('mouseleave', function(){
+// 	rotationSpeed = 0.001;
+// 	console.log('left');
+// });
 
 
 
@@ -38,19 +44,11 @@ function grow(){
 	//console.log(myOtherBox.object3D.scale);
 }
 
-var rotatingspeed = 0.01;
 
-function rotate() {
-	myBox.object3D.rotation.x += rotatingspeed;
-	myBox.object3D.rotation.y += rotatingspeed/2;
-	myBox.object3D.rotation.z += rotatingspeed;
-}
-
-setInterval(rotate, 10);
 
 myOtherBox.addEventListener('click', function(){ // uses a fuse
+	rotationSpeed = 0.001;
 	grow();
-	rotate();
 	console.log('grew');
 	
 });
