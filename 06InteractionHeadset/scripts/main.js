@@ -48,7 +48,7 @@ function grow(){
 
 
 myOtherBox.addEventListener('click', function(){ // uses a fuse
-	rotationSpeed = 0.01;
+	rotationSpeed = rotationSpeed * 0.01;
 	rotate();
 	grow();
 	console.log('grew');
