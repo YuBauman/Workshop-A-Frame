@@ -45,14 +45,19 @@
         rotation="0 45 0" 
         width="3" 
         height="1" 
-        depth="1" 
-        material="src: #wood2"
+        depth="1"
+        color: "#118ab2"
         shadow
         animation="property: position;
                    to: 4 5 -3;
-                   dur: 1000;
+                   dur: 3000;
                    easing: linear;
-                   loop: true">  
+                   loop: true"
+      
+        animation__2="property: color;
+                      to: #ef476f;
+                      easing: ease-out;
+                      loop: true">  
       </a-box>
       <a-plane id="ground"
         position="0 0 -4" 
