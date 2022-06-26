@@ -24,12 +24,12 @@ setInterval(spin, 10);
 // 	console.log('left');
 // });
 
-var rotatingDegree = 1.5;
+var rotatingDegree = 45;
 
 function rotate() {
-	myBox.object3D.rotation.x *= rotatingDegree;
-	myBox.object3D.rotation.y *= rotatingDegree/2;
-	myBox.object3D.rotation.z *= rotatingDegree;
+	myBox.object3D.rotation.x += rotatingDegree;
+	myBox.object3D.rotation.y += rotatingDegree;
+	myBox.object3D.rotation.z += rotatingDegree;
 }
 
 /*
